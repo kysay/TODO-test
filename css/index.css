@@ -1,0 +1,57 @@
+.todo_list_wrap .title_wrap {
+  font-weight: bold;
+  font-size: 22px;
+}
+.todo_list_wrap ul {
+  display: inline-block;
+  width: 300px;
+  border: 1px solid red;
+  font-size: 22px !important;
+}
+.todo_list_wrap ul li {
+  display: flex;
+}
+.todo_list_wrap ul li > * {
+  float: left;
+  display: inline-block;
+}
+.todo_list_wrap ul li .checkbox_wrap {
+  width: 50px;
+}
+.todo_list_wrap ul li .text_wrap {
+  width: calc(100% - 150px);
+}
+.todo_list_wrap ul li a {
+  width: 50px;
+  font-size: 12px;
+}
+.todo_list_wrap .checkbox_wrap input[type=checkbox] {
+  display: none;
+}
+.todo_list_wrap .checkbox_wrap input[type=checkbox] + label {
+  position: relative;
+  background: red;
+  width: 25px;
+  height: 25px;
+}
+.todo_list_wrap .checkbox_wrap label:before {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  background: red;
+}
+.todo_list_wrap .checkbox_wrap input[type=checkbox]:checked + label:after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 25px;
+  height: 25px;
+  background: red;
+}
+
+a {
+  font-size: 22px;
+}
+
+/*# sourceMappingURL=index.css.map */
