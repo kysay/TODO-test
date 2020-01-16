@@ -1,8 +1,24 @@
 .todo_list_wrap {
-  border: 1px solid red;
 
-  ul {
+  .title_wrap{ font-weight: bold; font-size:22px; }
+
+  ul { display: inline-block; width: 300px; border: 1px solid red;
     font-size: 22px !important;
+    li { display: flex;
+      > * { float:left; display: inline-block; }
+      .checkbox_wrap { width: 50px; }
+      .text_wrap { width: calc(100% - 150px); }
+      a { width: 50px; font-size: 12px; }
+    }
+  }
+
+  .checkbox_wrap {
+    input[type='checkbox'] { display: none; }
+    input[type='checkbox'] + label { position: relative; background: red; width: 25px; height: 25px; }
+    label:before { position: relative; width: 25px; height: 25px; background: red; }
+    input[type='checkbox']:checked + label:after { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+      width: 25px; height: 25px; background: red; }
   }
 }
 a { font-size: 22px; }
+
