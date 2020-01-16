@@ -1,0 +1,39 @@
+.checkbox_wrap [type=checkbox] {
+  display: none;
+}
+.checkbox_wrap label {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+.checkbox_wrap [type=checkbox] + label:after {
+  position: absolute;
+  width: 12px;
+  height: 6px;
+  top: calc(50% - 1px);
+  left: 50%;
+  border-left: 2px solid blue;
+  border-bottom: 2px solid blue;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  content: "";
+  transition: all 2s;
+  border-bottom-left-radius: 4px;
+}
+.checkbox_wrap [type=checkbox] + label:before {
+  position: absolute;
+  background: red;
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: "";
+  transition: all 0.2s;
+}
+.checkbox_wrap [type=checkbox]:checked + label:before {
+  background: darkgoldenrod;
+}
+
+/*# sourceMappingURL=input.css.map */

@@ -1,0 +1,35 @@
+@import "variable";
+
+.checkbox_wrap {
+
+  [type="checkbox"] { display: none; }
+  label { position: relative; display: inline-block; width: $box_size; height: $box_size; }
+
+  [type="checkbox"] + label:after {
+    position: absolute;
+    width: 12px; height: 6px;
+    top: calc(50% - 1px); left: 50%;
+    border-left: 2px solid blue;
+    border-bottom: 2px solid blue;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    content: '';
+    transition: all 2s;
+    border-bottom-left-radius: 4px;
+  }
+  [type="checkbox"]:checked + label:after {
+
+  }
+  [type="checkbox"] + label:before {
+    position: absolute;
+    background: red;
+    border-radius: 100%;
+    width: $box_size; height: $box_size;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    content: '';
+    transition: all .2s;
+  }
+  [type="checkbox"]:checked + label:before {
+    background: darkgoldenrod;
+  }
+}
