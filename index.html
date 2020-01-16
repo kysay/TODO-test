@@ -8,6 +8,8 @@
 
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/variable.css">
+    <link rel="stylesheet" type="text/css" href="css/input.css">
 
     <title>TODO-APP</title>
 </head>
@@ -17,26 +19,23 @@
     <div class="title_wrap">권용식의 TODO</div>
 
     <div>
-        <ul>
-            <li>
+        <ul id="listWrap">
+            <li class="listItem">
                 <div class="checkbox_wrap">
-                    <input type="checkbox">
-                    <label>1</label>
+                    <input type="checkbox" name="checkbox_1" id="checkbox_1" >
+                    <label for="checkbox_1"></label>
                 </div>
                 <div class="text_wrap">내가 작성한 내용 내가 작성한 내용 내가 작성한 내용</div>
-                <a href="javascript:;">삭제</a>
-                <a href="javascript:;">수정</a>
+                <a href="javascript:;" class="delete_but">삭제</a>
+                <a href="javascript:;" class="edit_but">수정</a>
             </li>
+            <li class="listItem"></li>
+            <li class="listItem"></li>
         </ul>
     </div>
 
-    <div>
-        <a href="javascript:;">추가</a>
-    </div>
-    <div>
-        <label>
-            <input type="text">
-        </label>
+    <div class="add_input_wrap">
+        <input type="text">
         <a href="javascript:;">등록</a>
     </div>
 </div>

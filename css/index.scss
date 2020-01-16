@@ -1,24 +1,25 @@
-.todo_list_wrap {
+@import "variable";
+
+.todo_list_wrap { display: inline-block; width: 300px;
 
   .title_wrap{ font-weight: bold; font-size:22px; }
 
-  ul { display: inline-block; width: 300px; border: 1px solid red;
+  ul { display: inline-block; width: 100%; border: 1px solid red;
     font-size: 22px !important;
     li { display: flex;
       > * { float:left; display: inline-block; }
       .checkbox_wrap { width: 50px; }
-      .text_wrap { width: calc(100% - 150px); }
-      a { width: 50px; font-size: 12px; }
+      .text_wrap { width: calc(100% - 115px); }
+      a { width: 30px; margin-right: 5px; text-align: center; font-size: 12px; height: 20px; line-height: 20px; border: 1px solid; }
+      a:last-of-type { margin-right: 0; }
+      .edit_but { border-color: $edit_but; color: $edit_but; }
+      .delete_but { border-color: $delete_but; color: $delete_but; }
     }
   }
 
-  .checkbox_wrap {
-    input[type='checkbox'] { display: none; }
-    input[type='checkbox'] + label { position: relative; background: red; width: 25px; height: 25px; }
-    label:before { position: relative; width: 25px; height: 25px; background: red; }
-    input[type='checkbox']:checked + label:after { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
-      width: 25px; height: 25px; background: red; }
+  .add_input_wrap { display: inline-block; width: 100%;
+    > * { float:left; display: inline-block; }
+    input { height: 40px; width: calc(100% - 60px); margin-right: 10px; padding: 5px; box-sizing: border-box; border-radius: 20px; border: 1px solid black; }
+    a { width: 50px; height: 40px; line-height: 40px; border-radius: 20px; color: white; background: green; text-align: center; }
   }
 }
-a { font-size: 22px; }
-
