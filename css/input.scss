@@ -9,19 +9,19 @@
     position: absolute;
     width: 12px; height: 6px;
     top: calc(50% - 1px); left: 50%;
-    border-left: 2px solid blue;
-    border-bottom: 2px solid blue;
+    border-left: 2px solid #aaa;
+    border-bottom: 2px solid #aaa;
     transform: translate(-50%, -50%) rotate(-45deg);
     content: '';
     transition: all 2s;
     border-bottom-left-radius: 4px;
   }
   [type="checkbox"]:checked + label:after {
-
+    border-color: white !important;
   }
   [type="checkbox"] + label:before {
     position: absolute;
-    background: red;
+    background: $edit_but;
     border-radius: 100%;
     width: $box_size; height: $box_size;
     top: 50%; left: 50%;
@@ -30,6 +30,6 @@
     transition: all .2s;
   }
   [type="checkbox"]:checked + label:before {
-    background: darkgoldenrod;
+    background: black;
   }
 }

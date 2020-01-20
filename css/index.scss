@@ -1,25 +1,38 @@
 @import "variable";
 
-.todo_list_wrap { display: inline-block; width: 300px;
+.todo_list_wrap { display: inline-block; width: calc(100% - 20px); margin: 10px 10px 0; border: 1px solid black; padding: 10px; box-sizing: border-box; max-width: calc(100% - 20px);
+  resize: horizontal;
+  overflow: auto;
 
-  .title_wrap{ font-weight: bold; font-size:22px; }
+  .title_wrap{ font-weight: bold; font-size:22px; text-align: center; padding: 10px 0;
+    background: -webkit-linear-gradient(30deg, red, blue);
+    color: transparent;
+    -webkit-background-clip: text;
+  }
 
-  ul { display: inline-block; width: 100%; border: 1px solid red;
+  ul { display: inline-block; width: 100%;
     font-size: 22px !important;
-    li { display: flex;
+    li { display: flex; padding: 5px 10px;
       > * { float:left; display: inline-block; }
       .checkbox_wrap { width: 50px; }
       .text_wrap { width: calc(100% - 115px); }
-      a { width: 30px; margin-right: 5px; text-align: center; font-size: 12px; height: 20px; line-height: 20px; border: 1px solid; }
+
+      a { width: 30px; margin-right: 5px; text-align: center; font-size: 12px; height: 20px; line-height: 20px; border: 1px solid; box-sizing: border-box; }
       a:last-of-type { margin-right: 0; }
       .edit_but { border-color: $edit_but; color: $edit_but; }
       .delete_but { border-color: $delete_but; color: $delete_but; }
     }
   }
 
-  .add_input_wrap { display: inline-block; width: 100%;
+  .add_input_wrap { display: inline-block; width: 100%; margin-top: 10px; float: left;
     > * { float:left; display: inline-block; }
-    input { height: 40px; width: calc(100% - 60px); margin-right: 10px; padding: 5px; box-sizing: border-box; border-radius: 20px; border: 1px solid black; }
-    a { width: 50px; height: 40px; line-height: 40px; border-radius: 20px; color: white; background: green; text-align: center; }
+    input { height: 40px; width: calc(100% - 60px); margin-right: 10px; padding: 5px; box-sizing: border-box; border: 1px solid black; }
+    a { width: 50px; height: 40px; line-height: 40px; color: white; background: black; text-align: center; }
   }
+}
+
+.current_condition { display: inline-block; width: 100%; position: relative; margin-bottom: 20px;
+  > div { position: absolute; height: 15px; width: 100%; border-radius: 15px; }
+  .bg { background: black; }
+  .bar { background: $edit_but; width: 30px; }
 }

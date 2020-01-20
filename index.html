@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="js/index.js"></script>
 
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="stylesheet" type="text/css" href="css/reset.css">
@@ -16,29 +15,41 @@
 <body>
 
 <div class="todo_list_wrap">
-    <div class="title_wrap">권용식의 TODO</div>
+    <div class="title_wrap">TODO LIST</div>
 
-    <div>
-        <ul id="listWrap">
-            <li class="listItem">
-                <div class="checkbox_wrap">
-                    <input type="checkbox" name="checkbox_1" id="checkbox_1" >
-                    <label for="checkbox_1"></label>
-                </div>
-                <div class="text_wrap">내가 작성한 내용 내가 작성한 내용 내가 작성한 내용</div>
-                <a href="javascript:;" class="delete_but">삭제</a>
-                <a href="javascript:;" class="edit_but">수정</a>
-            </li>
-            <li class="listItem"></li>
-            <li class="listItem"></li>
-        </ul>
+    <div class="current_condition">
+        <div class="bg"></div>
+        <div class="bar" id="barWidth"></div>
     </div>
+
+    <ul id="listWrap" class="list_wrap">
+        <li class="listItem">
+            <div class="checkbox_wrap">
+                <input type="checkbox" name="checkbox_1" id="checkbox_1" >
+                <label for="checkbox_1"></label>
+            </div>
+            <div class="text_wrap">내가 작성한 내용 내가 작성한 내용 내가 작성한 내용</div>
+            <a href="javascript:;" class="delete_but">삭제</a>
+            <a href="javascript:;" class="edit_but">수정</a>
+        </li>
+        <li class="listItem">
+            <div class="checkbox_wrap">
+                <input type="checkbox" name="checkbox_1" id="checkbox_1" >
+                <label for="checkbox_1"></label>
+            </div>
+            <div class="text_wrap">내가 작성한 내용 내가 작성한 내용 내가 작성한 내용</div>
+            <a href="javascript:;" class="delete_but">삭제</a>
+            <a href="javascript:;" class="edit_but">수정</a>
+        </li>
+    </ul>
 
     <div class="add_input_wrap">
-        <input type="text">
-        <a href="javascript:;">등록</a>
+        <input type="text" id="new_list_text">
+        <a href="javascript:;" id="listAddBut">등록</a>
     </div>
 </div>
+
+<script src="js/index.js"></script>
 
 </body>
 </html>
