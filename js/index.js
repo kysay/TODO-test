@@ -6,6 +6,12 @@ document.getElementById('listWrap');
 
 window.onload = function () {
 
+    // 진행도
+    const barWidth = document.getElementById('barWidth');
+    barWidth.style.width = "150px";
+    // 진행도
+
+    // 등록클릭 (엔터처리도 해보자)
     document.getElementById('listAddBut').addEventListener("click", function () {
         if(document.getElementById('new_list_text').value !== '' ){
             setInputValue();
@@ -13,7 +19,19 @@ window.onload = function () {
         else {
             alert('텍스트를 입력해주세요.');
         }
-    })
+    });
+
+    const delete_but = document.getElementsByClassName('delete_but');
+
+    // delete_but.addEventListener("click", function () {
+    //     console.log('삭제되어야함');
+    // });
+
+    document.getElementById('listWrap').forEach(function(li) {
+        li.addEventListener('click', function () {
+            console.log('삭제되어야함');
+        });
+    });
 
 };
 
@@ -36,13 +54,13 @@ function setListContent() {
     const textNode = document.createTextNode(document.getElementById('new_list_text').value);
     const textWrap = document.createElement("div");
 
-    textWrap.appendChild(textNode).classList.add("text_wrap");
+    // console.log(textNode + 'hello');
+    // console.log(textWrap + 'hello2');
+    textWrap.appendChild(textNode);
     node.appendChild(textNode);
 
-    // const checkbox = document.cre('');
 
-
-
+    console.log('gg');
     document.getElementById('listWrap').appendChild(node);
 }
 
